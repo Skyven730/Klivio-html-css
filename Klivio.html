@@ -7,19 +7,398 @@
     <link rel="stylesheet" href="Klivio.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="logo Klivio" id="title-logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#les-formations">Les formations</a></li>
-            </ul>
-            <div class="search-bar">
-                <input type="search" placeholder="Rechercher">
-                <button type="submit">🔍</button>
-            </div>
-        </nav>
-    </header>
+
+<!-- HEADER -->
+
+<header>
+  <nav>
+    <img src="./ressources/logo.png" alt="logo Klivio" id="title-image">
+    <a href="#formations" class="blanc">Les formations</a>
+    <div class="search-bar">
+      <input type="search" placeholder="Rechercher" aria-label="Rechercher"/>
+      <button type="submit" id="icon"></button>
+    </div>
+    <div class="auth-buttons">
+      <button class="login">Connexion</button>
+      <button class="signup">Inscription</button>
+    </div>
+
+    <!-- bouton burger -->
+    <div class="menu-toggle">☰</div>
+
+  </nav>
+</header>
+
+<!-- SECTION 1 - BANNIERE -->
+
+<section class="bienvenue">
+  <h1 class="titre-accroche" class="bleu-fonce">KLIVIO, L'ALLIÉ DE VOTRE PROGRESSION</h1>
+  <p class="sous-titre">LES MEILLEURES FORMATIONS SUR LE DÉVELOPPEMENT PERSONNEL</p>
+  <button class="bouton-principal">En savoir plus</button>
+</section>
+
+<!-- SECTION 2 - FORMATIONS POPULAIRES -->
+
+<section id="section-formations-populaires">
+  <h2 class="titres-bleu-fonce" id="titre-formations-populaires">Les formations populaires</h2>
+  <div class="formations-container">
+    <div class="bleu-fonce">
+      <figure class="imageANDprice">
+        <img src="./ressources/img-course.png" alt="Fond vert">
+        <p class="price" id="fond-price-bleu-1">15,99 € <small><s>60€</s></small></p>
+      </figure>
+      <br>
+      <h3 class="sous-titres">Parler en public</h3>
+      <p>Sonia Lefèvre | Coach prise de parole</p>
+      <div>
+        <img src="./ressources/5_star.png" alt="Icône des 5 étoiles">  
+      </div>
+      <p>Gagnez en aisance et captez votre auditoire</p>
+    </div>
+
+    <div class="bleu-fonce">
+      <figure class="imageANDprice">
+        <img src="./ressources/img-course.png" alt="Fond vert">
+        <p class="price" id="fond-price-bleu-2">15,99 € <small><s>60€</s></small></p>
+      </figure>
+      <br>
+      <h3 class="sous-titres">Gérer le stress</h3>
+      <p>Lucie Garnier | Formatrice</p>
+      <div>
+        <img src="./ressources/4_star.png" alt="Icône des 4 étoiles">
+      </div>
+      <p>Apprenez à rester serein face aux défis</p>
+    </div>
+
+    <div class="bleu-fonce">
+      <figure class="imageANDprice">
+        <img src="./ressources/img-course.png" alt="Fond vert">
+        <p class="price" id="fond-price-bleu-3">15,99 € <small><s>60€</s></small></p>
+      </figure>
+      <br>
+      <h3 class="sous-titres">Travailler en équipe</h3>
+      <p>David Moreau | Expert</p>
+      <div>
+        <img src="./ressources/5_star.png" alt="Icône des 5 étoiles">
+      </div>
+      <p>Collaborez efficacement, même à distance</p>
+    </div>
+
+    <div class="bleu-fonce">
+      <figure class="imageANDprice">
+        <img src="./ressources/img-course.png" alt="Fond vert">
+        <p class="price" id="fond-price-bleu-4">15,99 € <small><s>60€</s></small></p>
+      </figure>
+      <br>
+      <h3 class="sous-titres">Gérer son temps</h3>
+      <p>Claire Dumas | Coach organisation</p>
+      <div>
+        <img src="./ressources/4_star.png" alt="Icône des 4 étoiles">
+      </div>
+      <p>Optimisez vos journées et gagnez en efficacité</p>
+    </div> 
+  </div>
+  <div class="moreInformation">
+   <button id="moreInformation-fond-blue">Voir plus de formations</button> 
+  </div>
+</section>
+
+<!-- SECTION 3 - FORMATIONS RECENTES -->
+
+<section id="section-formations-recentes">
+  <h2 class="titres-blanc">Les formations récentes</h2>
+  <div class="formations-container">
+    <div class="blanc">
+      <figure class="imageANDprice">
+        <img src="./ressources/img-course.png" alt="Font vert">
+        <p class="price" id="fond-price-blanc-1">15,99 € <small><s>60€</s></small></p>
+      </figure>
+      <br>
+      <h3 class="sous-titres">Mieux communiquer</h3>
+      <p>Julien Martel | Coach en comm.</p>
+      <div>
+        <img src="./ressources/5_star.png" alt="Icône des 5 étoiles">
+      </div> 
+      <p>Améliorez vos échanges et votre impact relationnel</p>
+    </div>
+
+    <div class="blanc">
+      <figure class="imageANDprice">
+        <img src="./ressources/img-course.png" alt="Fond vert">
+        <p class="price" id="fond-price-blanc-2">15,99 € <small><s>60€</s></small></p>
+      </figure>
+      <br>
+      <h3 class="sous-titres">Maîtriser ses émotions</h3>
+      <p>Amel Benali | Psy. du travail</p>
+      <div>
+        <img src="./ressources/5_star.png" alt="Icône des 5 étoiles">
+      </div>
+      <p>Développez calme et intelligence émotionnelle</p>
+    </div>
+
+    <div class="blanc">
+      <figure class="imageANDprice">
+        <img src="./ressources/img-course.png" alt="Icône des 4 étoiles">
+        <p class="price" id="fond-price-blanc-3">15,99 € <small><s>60€</s></small></p>
+      </figure>
+      <br>
+      <h3>Résoudre les problèmes</h3>
+      <p>Thomas Rivière | Expert</p>
+      <div>
+        <img src="./ressources/4_star.png" alt="Icône des 4 étoiles">
+      </div>
+      <p>Analysez, décidez et trouvez des solutions durables</p>
+    </div>
+
+    <div class="blanc">
+      <figure class="imageANDprice">
+        <img src="./ressources/img-course.png">
+        <p class="price" id="fond-price-blanc-4">15,99 € <small><s>60€</s></small></p>
+      </figure>
+      <br>
+      <h3>Leadership positif</h3>
+      <p>Marc Nguyen | Consultant</p>
+      <div>
+        <img src="./ressources/4_star.png" alt="Icônes des 4 étoiles">
+      </div>
+      <p>Inspirez, motivez et fédérez votre équipe</p>
+    </div>
+  </div>
+  <div class="moreInformation">
+    <button id="moreInformation-fond-blanc">Voir plus de formations</button>
+  </div>
+</section>
+
+<!-- SECTION 4 - AVIS CLIENTS -->
+
+<section id="avis-clients">
+  <h2 class="avis-title">AVIS CLIENTS</h2>
+  <div class="avis-container">
+    <article class="avis-card">
+      <img src="./ressources/juliette.png" alt="Photo de Juliette, cliente Klivio" class="avis-avatar">
+      <h3 class="avis-name">Juliette</h3>
+      <div class="avis-stars">
+        <img src="./ressources/5_star.png" alt="Icône des 5 étoiles">
+      </div>
+      <p class="avis-text">J'ai trouvé le parcours très bien structuré : vidéos courtes, quizs pertinents et projets pratiques qui m'ont permis d'appliquer immédiatement les notions. L'interface est claire et la progression est motivante — parfait pour se former en autonomie.</p>
+    </article>
+
+    <article class="avis-card">
+      <div>
+        <img src="./ressources/camille.png" alt="Photo de Camille, cliente Klivio" class="avis-avatar">
+      </div>
+      <h3 class="avis-name">Camille</h3>
+      <div class="avis-stars">
+        <img src="./ressources/5_star.png" alt="Icône des 5 étoiles">
+      </div>
+      <p class="avis-text">Bon équilibre entre théorie et pratique. Les chapitres sont détaillés, et le support et les corrections automatiques ont vraiment aidé. Idéal pour démarrer et progresser rapidement.</p>
+    </article>
+  </div>
+</section>
+
+<!-- SECTION 5 - AVANTAGES KLIVIO -->
+
+<section id="avantages-klivio">
+  <div class="avantages-wrapper">
+
+    <div class="avantages-texte">
+      <h2 class="avantages-titre">LES AVANTAGES KLIVIO</h2>
+
+      <ul class="avantages-liste">
+        <li class="avantages-item">
+          <span class="avantages-icone"><img src="./ressources/arrow-up-right@2x.png" alt="Icône flèche"></span>
+          <span>Suivi de sa progression</span>
+        </li>
+        <li class="avantages-item">
+          <span class="avantages-icone"><img src="./ressources/edit-01.png" alt="Icône crayon"></span>
+          <span>Exercices et QCM pour la mise en pratique</span>
+        </li>
+        <li class="avantages-item">
+          <span class="avantages-icone"><img src="./ressources/download-02.png" alt="Icône de téléchargement"></span>
+          <span>Possibilité de télécharger/imprimer les formations</span>
+        </li>
+        <li class="avantages-item">
+          <span class="avantages-icone"><img src="./ressources/star-02.png" alt="Icône Etoile"></span>
+          <span>Contenu qualitatif et vérifié</span>
+        </li>
+        <li class="avantages-item">
+          <span class="avantages-icone"><img src="./ressources/Icon (1).png" alt="Icône d'historique"></span>
+          <span>Suivi en autonomie, 24h/24, 7j/7</span>
+        </li>
+        <li class="avantages-item">
+          <span class="avantages-icone"><img src="./ressources/Icon (2).png" alt="Icône bulle de dissuction"></span>
+          <span>Espaces d'échanges dédiés pour poser ses questions sur les formations</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="avantages-image-wrapper">
+      <img src="./ressources/avantages.png"
+           alt="Femme souriante utilisant un ordinateur dans un bureau moderne"
+           class="avantages-image">
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 6 - CREER FORMATIONS -->
+
+<section id="createurs-klivio">
+  <div class="createurs-wrapper">
+
+    <div class="createurs-image-wrapper">
+      <img src="./ressources/become-author.png" alt="Vue plongeante sur une personne écrivant dans un cahier, avec un ordinateur et un bureau en bois" class="createurs-image">
+    </div>
+
+    <div class="createurs-texte">
+      <h2 class="createurs-titre">CRÉEZ VOS FORMATIONS AVEC KLIVIO</h2>
+
+      <ul class="createurs-liste">
+        <li class="createurs-item">
+          <img src="./ressources/coin-hand.png" alt="Icône argent dans la main">
+          <span>Commission unique, au pourcentage sur les ventes</span>
+        </li>
+        <li class="createurs-item">
+          <img src="./ressources/heart.png" alt="Icône coeur">
+          <span>Mise en avant sur la plateforme</span>
+        </li>
+        <li class="createurs-item">
+          <img src="./ressources/pencil-01.png" alt="Icône crayon">
+          <span>Contrôle total sur le cours : contenu, prix</span>
+        </li>
+        <li class="createurs-item">
+          <img src="./ressources/settings.png" alt="Icône paramêtre">
+          Fonctionnalités avancées : espace commentaires, possibilité de créer des QCM, exercices, vidéos, téléchargement en PDF, suivi des statistiques des ventes, gestion de codes promos, gestion de la facturation, etc.
+        </li>
+        <li class="createurs-item">
+          <img src="./ressources/user-profile-square.png" alt="Icône profil utilisateur">
+          <span>Le professeur reste 100 % propriétaire de sa formation et conserve tous ses droits d’auteur</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 - A PROPOS -->
+
+<section id="apropos-klivio">
+  <div class="apropos-wrapper">
+
+    <div class="apropos-texte">
+      <h2 class="apropos-titre">À PROPOS DE KLIVIO</h2>
+      <p>
+        Cher KliVio, nous défendons des valeurs fondamentales qui définissent notre approche éducative.
+        Nous nous engageons à assurer une rémunération équitable pour les créateurs de contenu,
+        reconnaissant la qualité de leur travail.
+      </p>
+      <p>
+        Favorisant l'autonomie d'apprentissage, notre plateforme offre la flexibilité nécessaire pour
+        explorer divers sujets. La transparence est au cœur de notre démarche, garantissant une clarté
+        totale sur les formations que les instructeurs proposent.
+      </p>
+    </div>
+
+    <div class="apropos-logo-wrapper">
+      <img src="./ressources/logo.png" alt="Logo Klivio" class="apropos-logo">
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 8 - CONTACT -->
+
+<section id="contact">
+  
+  <h2 class="contact-title">NOUS CONTACTER</h2>
+  <div class="contact-underline"></div>
+
+  <form class="contact-form">
+
+    <div class="contact-row">
+      <input type="text" placeholder="Nom" required>
+      <input type="email" placeholder="Email" required>
+    </div>
+
+    <textarea placeholder="Votre message" required></textarea>
+
+    <button type="submit" class="contact-button">
+      Envoyer
+    </button>
+
+  </form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="footer-klivio">
+
+  <!-- partie haute du footer -->
+  <div class="footer-wrapper">
+
+    <!-- COL 1 : logo -->
+    <div class="footer-col footer-logo">
+      <img src="./ressources/logo.png" alt="Logo Klivio" class="footer-logo-img">
+    </div>
+
+    <!-- COL 2 : mentions -->
+    <div class="footer-col">
+      <h4 class="footer-title">Mentions légales</h4>
+      <ul class="footer-links">
+        <li><a href="#">CGU</a></li>
+        <li><a href="#">CGV</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- COL 3 : coordonnées -->
+    <div class="footer-col">
+      <h4 class="footer-title">Coordonnées</h4>
+      <ul class="footer-contact">
+        <li>
+          <img src="./ressources/marker-02.png">
+          1 place république
+        </li>
+        <li>
+          <img src="./ressources/phone.png">
+          75003 Paris
+        </li>
+        <li>01.02.03.04.05</li>
+        <li>
+          <img src="./ressources/mail-01.png">
+          contact@klivio.fr
+        </li>
+      </ul>
+    </div>
+
+    <!-- COL 4 : connexion + inscription -->
+    <div class="footer-col footer-actions">
+      <a href="#" class="footer-login">Connexion</a>
+      <a href="#" class="footer-signup">Inscription</a>
+    </div>
+
+  </div>
+
+  <!-- ligne verte au milieu -->
+  <div class="footer-middle-line"></div>
+
+  <!-- partie basse : copyright + réseaux -->
+  <div class="footer-bottom">
+    <p class="footer-copy">© Klivio - 2025</p>
+
+    <div class="footer-bottom-right">
+      <span class="footer-social-title">Suivez-nous</span>
+      <div class="footer-socials">
+        <a href="#"><img src="./ressources/icon-facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="./ressources/icon-x.png" alt="X"></a>
+        <a href="#"><img src="./ressources/icon-instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="./ressources/icon-linkedin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
 </body>
 </html>

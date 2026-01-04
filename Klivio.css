@@ -1,4 +1,1026 @@
-header {
-    padding: 10px 20px;
-    backgroud-color: #333;
+
+/* TOUTE LA PAGE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+
+#title-image {
+    width: 5.25rem;
+    height: auto;
+    margin-left: 1.25rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 5rem;
+    color: rgb(255, 255, 255);
+    background-color: #152237;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin: 1.25rem;
+    text-decoration: none;
+    align-items: space-between;
+}
+
+.search-bar {
+    display: flex;
+    flex: 1;
+    max-width: 29.813rem;
+    margin: 0 1.25rem;
+    background-color: #152237;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: 0.063rem solid rgb(255, 255, 255);
+    border-radius: 0.25rem;
+    outline: none;
+    background-color: #152237;
+    background: url('./ressources/Icon.png') no-repeat right center;
+    background-position: calc(100% - 10px) center;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0);
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2rem;
+    width: auto;  
+}
+
+.auth-buttons button {
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 0.125rem solid transparent;   
+}
+
+
+.login {
+    color: #152237;
+    text-decoration: none;
+    background-color: #FFFFFF;
+}
+
+.signup {
+    color: #152237;
+    text-decoration: none;
+    background:
+    linear-gradient(to right, rgb(68, 221, 138), rgb(22, 184, 223));
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+
+  nav {
+    padding: 0 1rem;
+  }
+
+  nav a,
+  .search-bar,
+  .auth-buttons {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/* BODY */
+
+body {
+
+    width: 100%;
+}
+
+/* SECTION 1 À SECTION 2 ET SECTION 4 À SECTION 8 */
+
+.titres-bleu-fonce {
+    padding: 6.063rem 1.875rem;
+    color: #152237;
+}
+
+.bleu-fonce {
+    color: #152237;
+    font-weight: 400;
+}
+
+/* SECTION 2 ET SECTION 3 */
+
+.imageANDprice{
+    position: relative;
+}
+
+.imageANDprice img {
+    width: 100%;
+    display: block;
+}
+
+.price { 
+    display : flex;
+    position: absolute;
+    bottom: -5%;
+    right: 5%;
+    border-radius: 2rem;
+    font-weight: 700;
+    gap: 0.438rem;
+    align-items: center;
+    text-align: center;
+    padding: 0.375rem 0.5rem 0.349rem 0.688rem;
+}
+
+.price small {
+    font-size: 0.688rem;
+    font-weight: normal;
+}
+
+.moreInformation {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.moreInformation button {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 14.063rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    border: 0.125rem solid transparent; 
+}
+
+.formations-container {
+    display: flex;
+    justify-content: center;
+    gap: 5.625rem;
+    padding: 0 1.875rem 3.125rem 1.875rem;
+    line-height: 1.5rem;
+}
+
+.sous-titres {
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+
+  #section-formations-populaires {
+    padding: 3rem 1.5rem 2.5rem;
+  }
+
+  #titre-formations-populaires {
+    padding: 0 0 2rem;
+    text-align: center;
+  }
+
+  .formations-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .formations-container > .bleu-fonce {
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .imageANDprice img {
+    border-radius: 0.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  #section-formations-populaires {
+    padding: 2.5rem 1rem 2rem;
+  }
+
+  .formations-container > .bleu-fonce {
+    max-width: 18rem;
+  }
+}
+
+/* SECTION 1 - BANNIERE */
+
+.bienvenue {
+    background:
+    linear-gradient(to right, rgba(68, 221, 138, 0.8), rgba(21, 183, 226, 0.8)),
+    url("./ressources/bg-header.png");
+    width: 100%;
+    height: 28.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titre-accroche {
+    font-size: 3rem;
+    color: #152237;
+    font-style: Bold;
+    font-weight: 800;
+    text-align: center;
+}
+
+.sous-titre {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.bouton-principal {
+    margin-top: 1.875rem;
+    padding: 0.875rem 2.5rem;
+    font-size: 1.125rem;
+    color: #152237;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .bienvenue {
+    height: auto;                    
+    padding: 4rem 1.5rem;            
+    background-size: cover;
+    background-position: center;
+  }
+
+  .titre-accroche {
+    font-size: 2.2rem;           
+    line-height: 1.2;
+  }
+
+  .sous-titre {
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    text-align: center;
+  }
+
+  .bouton-principal {
+    margin-top: 1.8rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .bienvenue {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .titre-accroche {
+    font-size: 1.8rem;
+  }
+
+  .sous-titre {
+    font-size: 0.95rem;
+  }
+
+  .bouton-principal {
+    width: 100%;
+    max-width: 14rem;              
+  }
+}
+
+/* SECTION 2 - FORMATIONS POPULAIRES */
+
+.formations-container > .bleu-fonce {
+    width: 17rem;   
+}
+
+#section-formations-populaires {
+    background-color: #FFFFFF;
+}
+
+#titre-formations-populaires {
+    font-weight: 800;
+}
+
+#fond-price-bleu-1 {
+    color: #FFFFFF;
+    background-color: #152237;
+}
+
+#fond-price-bleu-2 {
+    color: #FFFFFF;
+    background-color: #152237;
+}
+
+#fond-price-bleu-3 {
+    color: #FFFFFF;
+    background-color: #152237;
+}
+
+#fond-price-bleu-4 {
+    color: #FFFFFF;
+    background-color: #152237;
+}
+
+#moreInformation-fond-blue {
+    color: #FFFFFF;
+    background-color: #152237;
+}
+
+
+
+/* SECTION 3 - FORMATIONS RECENTES*/
+
+#section-formations-recentes {
+    color: #FFFFFF;
+    background-color: #152237;
+    padding-bottom: 0.5rem;
+}
+
+.titres-blanc {
+    padding: 6.063rem 1.875rem;
+    color: #FFFFFF;
+}
+
+.formations-container > .blanc {
+    width: 17rem;
+}
+
+.blanc {
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+#moreInformation-fond-blanc {
+    color: #152237;
+    background-color: #FFFFFF;
+}
+
+#fond-price-blanc-1 {
+    color: #152237;
+    background-color: #FFFFFF;
+}
+
+#fond-price-blanc-2 {
+    color: #152237;
+    background-color: #FFFFFF;
+}
+
+#fond-price-blanc-3 {
+    color: #152237;
+    background-color: #FFFFFF;
+}
+
+#fond-price-blanc-4 {
+    color: #152237;
+    background-color: #FFFFFF;
+}
+
+/* SECTION 4 - AVIS CLIENTS*/
+
+#avis-clients {
+    background-color: #ffffff;
+    color: #152237;
+    padding: 5rem 4rem 6rem;   
+}
+
+.avis-title {
+    text-align: center;
+    font-size: 2.5rem;         
+    font-weight: 900;
+    letter-spacing: -1.5%;
+    margin-bottom: 4rem;
+}
+
+.avis-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;                 
+}
+
+.avis-card {
+    max-width: 34rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.avis-avatar {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.avis-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.avis-stars img {
+    display: block;
+    height: 0.763rem;
+    margin-bottom: 1.5rem;
+}
+
+.avis-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  #avis-clients {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .avis-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .avis-card {
+    max-width: 27rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .avis-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+/* SECTION 5 - AVANTAGES KLIVIO */
+
+#avantages-klivio {
+    background-color: #FFFFFF;
+    padding: 5rem 4rem;
+    color: #152237;
+}
+
+.avantages-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.avantages-texte {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.avantages-titre {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.avantages-liste {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.avantages-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.avantages-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.avantages-icone img {
+    width: 1.875rem;
+    height: 1.875rem;
+    object-fit: contain;
+}
+
+.avantages-image-wrapper {
+    flex: 1;
+}
+
+.avantages-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 900px) {
+    #avantages-klivio {
+        padding: 3rem 1.5rem 4rem;
+    }
+
+    .avantages-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+
+    .avantages-titre {
+        display: flex;
+        text-align: center;
+    }
+
+    .avantages-image-wrapper {
+        width: 100%;
+    }
+}
+
+/* SECTION 6 - CREER FORMATIONS */
+
+#createurs-klivio {
+  background-color: #3ee587;
+  padding: 5rem 4rem;
+}
+
+.createurs-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.createurs-image-wrapper {
+  flex: 1;
+}
+
+.createurs-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  display: block;
+}
+
+.createurs-texte {
+  flex: 1;
+  color: #0f1c30;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.createurs-titre {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.createurs-liste {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.createurs-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.createurs-item img {
+  width: 1.875rem;
+  height: 1.875rem;
+  flex-shrink: 0;
+}
+
+/* Bon je note pour celui la j'ai eu du mal */
+@media (max-width: 900px) {
+
+  .createurs-wrapper{
+    flex-direction: column;
+  }
+
+  /* Cacher l'image */
+  .createurs-image-wrapper{
+    display:none;
+  }
+
+  .createurs-titre{
+    text-align:center;
+    position:relative;
+  }
+
+  /* Recrée l'image SOUS le titre ici même */
+  .createurs-titre::after{
+    content:"";
+    display:block;
+    margin:1.5rem auto 2rem;
+    width:100%;
+    max-width:900px;
+    aspect-ratio: 16/9;
+    border-radius:8px;
+
+    background:url("./ressources/become-author.png")
+               center/cover no-repeat;
+  }
+}
+
+/* SECTION 7 - A PROPOS */
+
+#apropos-klivio {
+    background-color: #FFFFFF;
+}
+
+.apropos-wrapper {
+    display: flex;
+    min-height: 48.75rem;   
+}
+
+.apropos-texte {
+    flex: 0.7;
+    padding: 7rem 6rem;
+    color: #152237;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #FFFFFF;
+}
+
+.apropos-titre {
+    font-size: 2.5rem;                   
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.apropos-texte p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.apropos-logo-wrapper {
+    flex: 1;
+    background-color: #152237;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apropos-logo {
+    max-width: 26.875rem;
+    width: 60%;
+    height: auto;
+}
+
+@media (max-width: 900px){
+
+  .apropos-wrapper{
+    flex-direction: column-reverse;
+  }
+
+  .apropos-logo-wrapper{
+    order: 1;
+  }
+
+  .apropos-texte{
+    order: 2;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .apropos-wrapper {
+    min-height: auto;
+  }
+
+  .apropos-logo-wrapper {
+    flex: unset;
+    padding: 15rem 0;
+  }
+}
+
+/* SECTION 8 - CONTACT */
+
+#contact {
+    background-color: #ffffff;
+    padding: 6rem 4rem;
+    text-align: center;
+    color: #152237;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.contact-underline {
+    width: 10rem;
+    height: 2px;
+    margin: 1rem auto 3rem;
+    background: linear-gradient(to right, #44dd8a, #16b8df);
+}
+
+.contact-form {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-row {
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-row input,
+.contact-form textarea {
+    background-color: #0f1c31;
+    border: none;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    width: 100%;
+    font-family: inherit;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.8);
+}
+
+.contact-button {
+    width: 14rem;
+    margin: auto;
+    padding: 0.8rem 0;
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to right, #44dd8a, #16b8df);
+    color: #152237;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media (max-width: 800px) {
+
+  #contact {
+    padding: 3rem 1.5rem;
+  }
+
+  .contact-form {
+    gap: 1.5rem;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-row input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .contact-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .contact-form textarea {
+    min-height: 12rem;
+  }
+}
+
+/* FOOTER */
+
+#footer-klivio {
+  position: relative;
+  background-color: #0F1E33;
+  color: #ffffff;
+  padding: 3.5rem 5rem 2.5rem;
+}
+
+/* bande dégradée en haut du footer */
+#footer-klivio::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 0.4rem;
+  background: linear-gradient(90deg, #44DD8A, #14B5F5);
+}
+
+/* PARTIE HAUTE : 4 colonnes */
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto 2.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.3fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.footer-logo-img {
+  width: 10.5rem;
+}
+
+/* titres et listes */
+
+.footer-title {
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+}
+
+.footer-links,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+/* boutons connexion / inscription */
+
+.footer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.footer-login,
+.footer-signup {
+  display: inline-block;
+  padding: 0.5rem 1.3rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-login {
+  background-color: #ffffff;
+  color: #152237;
+}
+
+.footer-signup {
+  background: linear-gradient(90deg, #44DD8A, #14B5F5);
+  color: #152237;
+}
+
+/* LIGNE VERTE AU MILIEU */
+
+.footer-middle-line {
+  max-width: 1200px;
+  margin: 0 auto 1.75rem;
+  height: 2px;
+  background-color: #35D68F;
+}
+
+/* PARTIE BASSE */
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.footer-copy {
+  opacity: 0.8;
+}
+
+/* réseaux sociaux */
+
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-social-title {
+  opacity: 0.9;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.footer-socials img {
+  width: 1.5rem;
+}
+
+@media (max-width: 600px) {
+
+  /* footer plus compact */
+  #footer-klivio {
+    padding: 2.5rem 1.5rem 2.5rem;
+  }
+
+  /* une seule colonne centrée */
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .footer-logo-img {
+    margin: 0 auto 0.5rem;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
+
+  .footer-links li,
+  .footer-contact li {
+    text-align: center;
+  }
+
+  /* on cache les boutons Connexion / Inscription sur mobile */
+  .footer-actions {
+    display: none;
+  }
+
+  /* on enlève la ligne verte du milieu */
+  .footer-middle-line {
+    display: none;
+  }
+
+  /* bas du footer centré */
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .footer-bottom-right {
+    justify-content: center;
+  }
 }
